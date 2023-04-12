@@ -35,27 +35,27 @@ echo "<script type='text/javascript'> document.location = 'thankyou.php'; </scri
 							<form name="help" method="post">
 								<div class="modal-body modal-spa">
 									<div class="writ">
-										<h4>HOW CAN WE HELP YOU</h4>
+										<h4>BẠN CẦN GIÚP ĐỠ ?</h4>
 											<ul>
 												
 												<li class="na-me">
 													<select id="country" name="issue" class="frm-field required sect" required="">
-														<option value="">Select Issue</option> 		
-														<option value="Booking Issues">Booking Issues</option>
-														<option value="Cancellation"> Cancellation</option>
-														<option value="Refund">Refund</option>
-														<option value="Other">Other</option>														
+														<option value="">Chọn vấn đề</option> 		
+														<option value="Booking Issues">Đặt vé</option>
+														<option value="Cancellation">Hủy vé</option>
+														<option value="Refund">Hoàn tiền</option>
+														<option value="Other">Khác</option>														
 													</select>
 												</li>
 											
 												<li class="descrip">
-									<input class="special" type="text" placeholder="description"  name="description" required="">
+									<input class="special" type="text" placeholder="Mô tả chi tiết"  name="description" required="">
 												</li>
 													<div class="clearfix"></div>
 											</ul>
 											<div class="sub-bn">
 												<form>
-													<button type="submit" name="submit" class="subbtn">Submit</button>
+													<button type="submit" name="submit" class="subbtn">Gửi</button>
 												</form>
 											</div>
 									</div>

@@ -34,7 +34,7 @@ $error="Something went wrong. Please try again";
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>TMS | Package Details</title>
+<title>A-3T  | Chi tiết sách gói</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -84,7 +84,7 @@ $error="Something went wrong. Please try again";
 <?php include('includes/header.php');?>
 <div class="banner-3">
 	<div class="container">
-		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"> TMS -Package Details</h1>
+		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"> A-3T  | Chi tiết tour</h1>
 	</div>
 </div>
 <!--- /banner ---->
@@ -114,26 +114,26 @@ foreach($results as $result)
 			<div class="col-md-8 selectroom_right wow fadeInRight animated" data-wow-delay=".5s">
 				<h2><?php echo htmlentities($result->PackageName);?></h2>
 				<p class="dow">#PKG-<?php echo htmlentities($result->PackageId);?></p>
-				<p><b>Package Type :</b> <?php echo htmlentities($result->PackageType);?></p>
-				<p><b>Package Location :</b> <?php echo htmlentities($result->PackageLocation);?></p>
-					<p><b>Features</b> <?php echo htmlentities($result->PackageFetures);?></p>
+				<p><b>Loại gói :</b> <?php echo htmlentities($result->PackageType);?></p>
+				<p><b>Địa điểm :</b> <?php echo htmlentities($result->PackageLocation);?></p>
+					<p><b>Hoạt động</b> <?php echo htmlentities($result->PackageFetures);?></p>
 					<div class="ban-bottom">
 				<div class="bnr-right">
-				<label class="inputLabel">From</label>
+				<label class="inputLabel">Từ ngày</label>
 				<input class="date" id="datepicker" type="text" placeholder="dd-mm-yyyy"  name="fromdate" required="">
 			</div>
 			<div class="bnr-right">
-				<label class="inputLabel">To</label>
+				<label class="inputLabel">Đến ngày</label>
 				<input class="date" id="datepicker1" type="text" placeholder="dd-mm-yyyy" name="todate" required="">
 			</div>
 			</div>
 						<div class="clearfix"></div>
 				<div class="grand">
-					<p>Grand Total</p>
-					<h3>USD.800</h3>
+					<p>Tổng tiền</p>
+					<h3><?php echo htmlentities($result->PackagePrice);?></h3>
 				</div>
 			</div>
-		<h3>Package Details</h3>
+		<h3>Chi tiết</h3>
 				<p style="padding-top: 1%"><?php echo htmlentities($result->PackageDetails);?> </p>	
 				<div class="clearfix"></div>
 		</div>

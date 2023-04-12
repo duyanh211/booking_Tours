@@ -6,7 +6,7 @@ include('includes/config.php');
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>TMS | Tourism Management System</title>
+<title>WebSite đặt tour | A-3T</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
@@ -32,54 +32,9 @@ include('includes/config.php');
 <?php include('includes/header.php');?>
 <div class="banner">
 	<div class="container">
-		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"> TMS - Tourism Management System</h1>
+		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">WebSite đặt tuor | A-3T</h1>
 	</div>
 </div>
-
-
-<!--- rupes ---->
-<div class="container">
-	<div class="rupes">
-		<div class="col-md-4 rupes-left wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
-			<div class="rup-left">
-				<a href="offers.html"><i class="fa fa-usd"></i></a>
-			</div>
-			<div class="rup-rgt">
-				<h3>UP TO USD. 50 OFF</h3>
-				<h4><a href="offers.html">TRAVEL SMART</a></h4>
-				
-			</div>
-				<div class="clearfix"></div>
-		</div>
-		<div class="col-md-4 rupes-left wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
-			<div class="rup-left">
-				<a href="offers.html"><i class="fa fa-h-square"></i></a>
-			</div>
-			<div class="rup-rgt">
-				<h3>UP TO 70% OFF</h3>
-				<h4><a href="offers.html">ON HOTELS ACROSS WORLD</a></h4>
-				
-			</div>
-				<div class="clearfix"></div>
-		</div>
-		<div class="col-md-4 rupes-left wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
-			<div class="rup-left">
-				<a href="offers.html"><i class="fa fa-mobile"></i></a>
-			</div>
-			<div class="rup-rgt">
-				<h3>FLAT USD. 50 OFF</h3>
-				<h4><a href="offers.html">US APP OFFER</a></h4>
-			
-			</div>
-				<div class="clearfix"></div>
-		</div>
-	
-	</div>
-</div>
-<!--- /rupes ---->
-
-
-
 
 <!---holiday---->
 <div class="container">
@@ -89,7 +44,7 @@ include('includes/config.php');
 
 
 	
-	<h3>Package List</h3>
+	<h3>Danh sách gói tour</h3>
 
 					
 <?php $sql = "SELECT * from tbltourpackages order by rand() limit 4";
@@ -106,14 +61,14 @@ foreach($results as $result)
 					<img src="admin/pacakgeimages/<?php echo htmlentities($result->PackageImage);?>" class="img-responsive" alt="">
 				</div>
 				<div class="col-md-6 room-midle wow fadeInUp animated" data-wow-delay=".5s">
-					<h4>Package Name: <?php echo htmlentities($result->PackageName);?></h4>
-					<h6>Package Type : <?php echo htmlentities($result->PackageType);?></h6>
-					<p><b>Package Location :</b> <?php echo htmlentities($result->PackageLocation);?></p>
-					<p><b>Features</b> <?php echo htmlentities($result->PackageFetures);?></p>
+					<h4>Tên gói : <?php echo htmlentities($result->PackageName);?></h4>
+					<h6>Loại gói : <?php echo htmlentities($result->PackageType);?></h6>
+					<p><b>Địa chỉ :</b> <?php echo htmlentities($result->PackageLocation);?></p>
+					<p><b>Các hoạt động : </b> <?php echo htmlentities($result->PackageFetures);?></p>
 				</div>
 				<div class="col-md-3 room-right wow fadeInRight animated" data-wow-delay=".5s">
-					<h5>USD <?php echo htmlentities($result->PackagePrice);?></h5>
-					<a href="package-details.php?pkgid=<?php echo htmlentities($result->PackageId);?>" class="view">Details</a>
+					<h5><?php echo htmlentities($result->PackagePrice);?> VND</h5>
+					<a href="package-details.php?pkgid=<?php echo htmlentities($result->PackageId);?>" class="view">Chi tiết</a>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -121,7 +76,7 @@ foreach($results as $result)
 <?php }} ?>
 			
 		
-<div><a href="package-list.php" class="view">View More Packages</a></div>
+<div><a href="package-list.php" class="view">Xem thêm </a></div>
 </div>
 			<div class="clearfix"></div>
 	</div>
@@ -137,7 +92,7 @@ foreach($results as $result)
 			</div>
 			<div class="rou-rgt wow fadeInDown animated" data-wow-delay=".5s">
 				<h3>80000</h3>
-				<p>Enquiries</p>
+				<p>Lượt truy cập</p>
 			</div>
 				<div class="clearfix"></div>
 		</div>
@@ -146,8 +101,8 @@ foreach($results as $result)
 				<a href="#"><i class="fa fa-user"></i></a>
 			</div>
 			<div class="rou-rgt">
-				<h3>1900</h3>
-				<p>Regestered users</p>
+				<h3>19000</h3>
+				<p>Người đăng ký</p>
 			</div>
 				<div class="clearfix"></div>
 		</div>
@@ -156,8 +111,8 @@ foreach($results as $result)
 				<a href="#"><i class="fa fa-ticket"></i></a>
 			</div>
 			<div class="rou-rgt">
-				<h3>7,00,00,000+</h3>
-				<p>Booking</p>
+				<h3>7.000+</h3>
+				<p>Đặt vé</p>
 			</div>
 				<div class="clearfix"></div>
 		</div>

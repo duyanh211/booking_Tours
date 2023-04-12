@@ -4,15 +4,15 @@
 	<div class="container">
 		<ul class="tp-hd-lft wow fadeInLeft animated" data-wow-delay=".5s">
 			<li class="hm"><a href="index.html"><i class="fa fa-home"></i></a></li>
-			<li class="prnt"><a href="profile.php">My Profile</a></li>
-				<li class="prnt"><a href="change-password.php">Change Password</a></li>
-			<li class="prnt"><a href="tour-history.php">My Tour History</a></li>
-			<li class="prnt"><a href="issuetickets.php">Issue Tickets</a></li>
+			<li class="prnt"><a href="profile.php">Thông tin cá nhân</a></li>
+				<li class="prnt"><a href="change-password.php">Đổi mật khẩu</a></li>
+			<li class="prnt"><a href="tour-history.php">Lịch sử đặt tour</a></li>
+			<li class="prnt"><a href="issuetickets.php">Xuất vé</a></li>
 		</ul>
 		<ul class="tp-hd-rgt wow fadeInRight animated" data-wow-delay=".5s"> 
-			<li class="tol">Welcome :</li>				
+			<li class="tol">Xin chào! :</li>				
 			<li class="sig"><?php echo htmlentities($_SESSION['login']);?></li> 
-			<li class="sigi"><a href="logout.php" >/ Logout</a></li>
+			<li class="sigi"><a href="logout.php" >/ Đăng xuất</a></li>
         </ul>
 		<div class="clearfix"></div>
 	</div>
@@ -21,12 +21,12 @@
 	<div class="container">
 		<ul class="tp-hd-lft wow fadeInLeft animated" data-wow-delay=".5s">
 			<li class="hm"><a href="index.php"><i class="fa fa-home"></i></a></li>
-				<li class="hm"><a href="admin/index.php">Admin Login</a></li>
+				<li class="hm"><a href="admin/index.php">Admin Đăng nhập</a></li>
 		</ul>
 		<ul class="tp-hd-rgt wow fadeInRight animated" data-wow-delay=".5s"> 
 			<li class="tol">Toll Number : 123-4568790</li>				
-			<li class="sig"><a href="#" data-toggle="modal" data-target="#myModal" >Sign Up</a></li> 
-			<li class="sigi"><a href="#" data-toggle="modal" data-target="#myModal4" >/ Sign In</a></li>
+			<li class="sig"><a href="#" data-toggle="modal" data-target="#myModal" >Đăng ký</a></li> 
+			<li class="sigi"><a href="#" data-toggle="modal" data-target="#myModal4" >/ Đăng nhập</a></li>
         </ul>
 		<div class="clearfix"></div>
 	</div>
@@ -37,12 +37,12 @@
 <div class="header">
 	<div class="container">
 		<div class="logo wow fadeInDown animated" data-wow-delay=".5s">
-			<a href="index.php">Tourism <span>Management System</span></a>	
+			<a href="index.php">Website đặt tour<span> A-3T</span></a>	
 		</div>
 	
 		<div class="lock fadeInDown animated" data-wow-delay=".5s"> 
 			<li><i class="fa fa-lock"></i></li>
-            <li><div class="securetxt">SAFE &amp; SECURE </div></li>
+            <li><div class="securetxt">Bảo mật &amp; An toàn</div></li>
 			<div class="clearfix"></div>
 		</div>
 		<div class="clearfix"></div>
@@ -67,17 +67,17 @@
 				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 					<nav class="cl-effect-1">
 						<ul class="nav navbar-nav">
-							<li><a href="index.php">Home</a></li>
-							<li><a href="page.php?type=aboutus">About</a></li>
-								<li><a href="package-list.php">Tour Packages</a></li>
-								<li><a href="page.php?type=privacy">Privacy Policy</a></li>
-								<li><a href="page.php?type=terms">Terms of Use</a></li>
-								<li><a href="page.php?type=contact">Contact Us</a></li>
+							<li><a href="index.php">Trang chủ</a></li>
+							<li><a href="page.php?type=aboutus">Chi tiết</a></li>
+								<li><a href="package-list.php">Gói tours</a></li>
+								<li><a href="page.php?type=privacy">Chính sách bảo mật</a></li>
+								<li><a href="page.php?type=terms">Điều khoản sử dụng</a></li>
+								<li><a href="page.php?type=contact">Liên hệ chúng tôi</a></li>
 								<?php if($_SESSION['login'])
 {?>
-								<li>Need Help?<a href="#" data-toggle="modal" data-target="#myModal3"> / Write Us </a>  </li>
+								<li>Giúp đỡ?<a href="#" data-toggle="modal" data-target="#myModal3"> / Đánh giá</a>  </li>
 								<?php } else { ?>
-								<li><a href="enquiry.php"> Enquiry </a>  </li>
+								<li><a href="enquiry.php"> Đăng nhập</a>  </li>
 								<?php } ?>
 								<div class="clearfix"></div>
 

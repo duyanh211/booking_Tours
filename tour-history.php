@@ -43,11 +43,11 @@ $query-> bindParam(':email',$email, PDO::PARAM_STR);
 $query-> bindParam(':bid',$bid, PDO::PARAM_STR);
 $query -> execute();
 
-$msg="Booking Cancelled successfully";
+$msg="Bạn đã hủy thành công";
 }
 else
 {
-$error="You can't cancel booking before 24 hours";
+$error="Bạn không thể hủy vé khi thời hạn của vé bạn đặt ít hơn 24h";
 }
 }
 }
@@ -57,7 +57,7 @@ $error="You can't cancel booking before 24 hours";
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>TMS | Tourism Management System</title>
+<title>WebSite đặt tour | A-3T</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Tourism Management System In PHP" />
@@ -95,6 +95,10 @@ $error="You can't cancel booking before 24 hours";
     -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
     box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
 }
+
+tr th {
+	text-align: center;
+}
 		</style>
 </head>
 <body>
@@ -103,29 +107,29 @@ $error="You can't cancel booking before 24 hours";
 <?php include('includes/header.php');?>
 <div class="banner-1 ">
 	<div class="container">
-		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">TMS-Tourism Management System</h1>
+		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">WebSite đặt tour | A-3T</h1>
 	</div>
 </div>
 <!--- /banner-1 ---->
 <!--- privacy ---->
 <div class="privacy">
 	<div class="container">
-		<h3 class="wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">My Tour History</h3>
+		<h3 class="wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">Lịch sử đặt vé của bạn</h3>
 		<form name="chngpwd" method="post" onSubmit="return valid();">
 		 <?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
 				else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
 	<p>
 	<table border="1" width="100%">
-<tr align="center">
+<tr align="center" >
 <th>#</th>
 <th>Booking Id</th>
-<th>Package Name</th>	
-<th>From</th>
-<th>To</th>
-<th>Comment</th>
-<th>Status</th>
-<th>Booking Date</th>
-<th>Action</th>
+<th>Tên gói</th>	
+<th>Từ ngày</th>
+<th>Đến ngày</th>
+<th>Bình luận</th>
+<th>Trạng Thái</th>
+<th>Ngày đặt vé</th>
+<th></th>
 </tr>
 <?php 
 
@@ -149,28 +153,28 @@ foreach($results as $result)
 <td><?php echo htmlentities($result->comment);?></td>
 <td><?php if($result->status==0)
 {
-echo "Pending";
+echo '<p style = "color: blue;">Chờ xác nhận<p>';
 }
 if($result->status==1)
 {
-echo "Confirmed";
+echo '<p style = "color: green;">Đã xác nhận<p>';
 }
 if($result->status==2 and  $result->cancelby=='u')
 {
-echo "Canceled by you at " .$result->upddate;
+echo '<p style = "color: red;">Bạn đã hủy<p>' .$result->upddate;
 } 
 if($result->status==2 and $result->cancelby=='a')
 {
-echo "Canceled by admin at " .$result->upddate;
+echo '<p style = "color: red;">Admin đã hủy<p>' .$result->upddate;
 
 }
 ?></td>
 <td><?php echo htmlentities($result->regdate);?></td>
 <?php if($result->status==2)
 {
-	?><td>Cancelled</td>
+	?><td>Đã hủy</td>
 <?php } else {?>
-<td><a href="tour-history.php?bkid=<?php echo htmlentities($result->bookid);?>" onclick="return confirm('Do you really want to cancel booking')" >Cancel</a></td>
+<td><a href="tour-history.php?bkid=<?php echo htmlentities($result->bookid);?>" onclick="return confirm('Bạn xác nhận muốn hủy ?')" >Hủy</a></td>
 <?php }?>
 </tr>
 <?php $cnt=$cnt+1; }} ?>
