@@ -11,7 +11,7 @@ else{
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>TMS | Admin manage Users</title>
+<title>A-3T | Admin Quản lý khách hành</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -74,23 +74,23 @@ else{
 				</div>
 <!--heder end here-->
 <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a><i class="fa fa-angle-right"></i>Manage Users</li>
+                <li class="breadcrumb-item"><a href="index.html">Home</a><i class="fa fa-angle-right"></i>Quản lý khách hàng</li>
             </ol>
 <div class="agile-grids">	
 				<!-- tables -->
 				
 				<div class="agile-tables">
 					<div class="w3l-table-info">
-					  <h2>Manage Users</h2>
+					  <h2>Quản lý khách hàng</h2>
 					    <table id="table">
 						<thead>
 						  <tr>
 						  <th>#</th>
-							<th>Name</th>
-							<th>Mobile No.</th>
-							<th>Email Id</th>
-							<th>RegDate </th>
-							<th>Updation Date</th>
+							<th>Tên</th>
+							<th>Số điện thoại</th>
+							<th>Email</th>
+							<th>Ngày đăng ký</th>
+							<th>Ngày cập nhật</th>
 						  </tr>
 						</thead>
 						<tbody>

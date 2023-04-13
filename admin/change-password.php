@@ -37,7 +37,7 @@ $error="Your current password is wrong";
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>TMS | Admin Change Password</title>
+<title>A-3T | Admin infomation</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -94,7 +94,7 @@ return true;
 				</div>
 <!--heder end here-->
 	<ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="dashboard.php">Home</a><i class="fa fa-angle-right"></i>Profile <i class="fa fa-angle-right"></i> Change Password</li>
+                <li class="breadcrumb-item"><a href="dashboard.php">Home</a><i class="fa fa-angle-right"></i>Profile <i class="fa fa-angle-right"></i> Đổi mật khẩu</li>
             </ol>
 		<!--grid-->
  	<div class="grid-form">
@@ -108,7 +108,7 @@ return true;
 					<form  name="chngpwd" method="post" class="form-horizontal" onSubmit="return valid();">
 
 						<div class="form-group">
-							<label class="col-md-2 control-label">Current Password</label>
+							<label class="col-md-2 control-label">Mật khẩu hiện tại</label>
 							<div class="col-md-8">
 								<div class="input-group">
 									<span class="input-group-addon">
@@ -120,7 +120,7 @@ return true;
 						</div>
 
 	<div class="form-group">
-							<label class="col-md-2 control-label">New Password</label>
+							<label class="col-md-2 control-label">Mật khẩu mới</label>
 							<div class="col-md-8">
 								<div class="input-group">
 									<span class="input-group-addon">
@@ -132,7 +132,7 @@ return true;
 						</div>
 
 	<div class="form-group">
-							<label class="col-md-2 control-label">Confirm Password</label>
+							<label class="col-md-2 control-label">Xác nhận mật khẩu</label>
 							<div class="col-md-8">
 								<div class="input-group">
 									<span class="input-group-addon">
@@ -144,8 +144,8 @@ return true;
 						</div>
 
 						<div class="col-sm-8 col-sm-offset-2">
-				<button type="submit" name="submit" class="btn-primary btn">Submit</button>
-				<button type="reset" class="btn-inverse btn">Reset</button>
+				<button type="submit" name="submit" class="btn-primary btn">Lưu</button>
+				<button type="reset" class="btn-inverse btn">Đặt lại</button>
 			</div>
 		</div>
 			

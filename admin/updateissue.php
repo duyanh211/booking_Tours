@@ -18,7 +18,7 @@ $query -> bindParam(':remark',$remark, PDO::PARAM_STR);
 $query-> bindParam(':iid',$iid, PDO::PARAM_STR);
 $query -> execute();
 
-$msg="Remark  successfully Updated";
+$msg="Nhận xét thành công";
 }
 
 
@@ -34,10 +34,10 @@ function f3()
 window.print(); 
 }
 </script>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE HTML>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Update Compliant</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
 <link href="anuj.css" rel="stylesheet" type="text/css">
@@ -49,7 +49,7 @@ window.print();
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 
     <tr height="50">
-      <td colspan="2" class="fontkink2" style="padding-left:0px;"><div class="fontpink2"> <b>Update Remark !</b></div></td>
+      <td colspan="2" class="fontkink2" style="padding-left:0px;"><div class="fontpink2"> <b>Cập nhật nhận xét !</b></div></td>
       
     </tr>
 
@@ -80,7 +80,7 @@ foreach($results as $result)
 ?>
 
      <tr style=''>
-      <td class="fontkink1" >Remark:</td>
+      <td class="fontkink1" >Nhận xét:</td>
       <td class="fontkink" align="justify" ><span class="fontkink">
         <textarea cols="50" rows="7" name="remark" required="required" ></textarea>
         </span></td>
@@ -95,11 +95,11 @@ foreach($results as $result)
     </tr> 
     <?php } else { ?>
      <tr>
-      <td class="fontkink1" ><b>Remark:</b></td>
+      <td class="fontkink1" ><b>Nhận xét:</b></td>
       <td class="fontkink" align="justify" ><?php echo htmlentities($result->AdminRemark);?></td>
     </tr>
     <tr>
-      <td class="fontkink1" ><b>Remark Date:</b></td>
+      <td class="fontkink1" ><b>Ngày nhận xét:</b></td>
       <td class="fontkink" align="justify" ><?php echo htmlentities($result->AdminremarkDate);?></td>
     </tr>
     <?php }}}?>

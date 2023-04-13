@@ -1,3 +1,3 @@
 <div class="copyrights">
-	 <p>© 2016 TMS. All Rights Reserved |  <a href="#">TMS</a> </p>
+	 <p>© A-3T. All Rights Reserved |  <a href="#">WebSite đặt tour | A-3T</a> </p>
 </div>	

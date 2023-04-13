@@ -20,7 +20,7 @@ $query -> bindParam(':cancelby',$cancelby , PDO::PARAM_STR);
 $query-> bindParam(':bid',$bid, PDO::PARAM_STR);
 $query -> execute();
 
-$msg="Booking Cancelled successfully";
+$msg="Hủy đặt vé thành công";
 }
 
 
@@ -34,7 +34,7 @@ $query = $dbh->prepare($sql);
 $query -> bindParam(':status',$status, PDO::PARAM_STR);
 $query-> bindParam(':bcid',$bcid, PDO::PARAM_STR);
 $query -> execute();
-$msg="Booking Confirm successfully";
+$msg="Xác nhận đặt vé thành công";
 }
 
 
@@ -44,7 +44,7 @@ $msg="Booking Confirm successfully";
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>TMS | Admin manage Bookings</title>
+<title>A-3T | Admin Quản lý đặt vé</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -116,7 +116,7 @@ $msg="Booking Confirm successfully";
 				</div>
 <!--heder end here-->
 <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a><i class="fa fa-angle-right"></i>Manage Bookings</li>
+                <li class="breadcrumb-item"><a href="index.html">Home</a><i class="fa fa-angle-right"></i>Quản lý đặt vé</li>
             </ol>
 <div class="agile-grids">	
 				<!-- tables -->
@@ -124,19 +124,19 @@ $msg="Booking Confirm successfully";
 				else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
 				<div class="agile-tables">
 					<div class="w3l-table-info">
-					  <h2>Manage Bookings</h2>
+					  <h2>Quản lý đặt vé</h2>
 					    <table id="table">
 						<thead>
 						  <tr>
 						  <th>Booikn id</th>
-							<th>Name</th>
-							<th>Mobile No.</th>
-							<th>Email Id</th>
-							<th>RegDate </th>
-							<th>From /To </th>
-							<th>Comment </th>
-							<th>Status </th>
-							<th>Action </th>
+							<th>Ten</th>
+							<th>Số điện thoại</th>
+							<th>Email </th>
+							<th>Ngày đăng ký </th>
+							<th>Từ  /đến </th>
+							<th>Bình luận </th>
+							<th>Trạng thái </th>
+							<th></th>
 						  </tr>
 						</thead>
 						<tbody>
@@ -178,9 +178,9 @@ echo "Canceled by User at " .$result->upddate;
 
 <?php if($result->status==2)
 {
-	?><td>Cancelled</td>
+	?><td style ="color: red;">Đã hủy</td>
 <?php } else {?>
-<td><a href="manage-bookings.php?bkid=<?php echo htmlentities($result->bookid);?>" onclick="return confirm('Do you really want to cancel booking')" >Cancel</a> / <a href="manage-bookings.php?bckid=<?php echo htmlentities($result->bookid);?>" onclick="return confirm('Do you really want to cancel booking')" >Confirm</a></td>
+<td><a href="manage-bookings.php?bkid=<?php echo htmlentities($result->bookid);?>" onclick="return confirm('Xác nhập hủy vé ?')" >Hủy</a></td>
 <?php }?>
 
 						  </tr>

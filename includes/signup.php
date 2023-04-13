@@ -63,7 +63,7 @@ error:function (){}
 											</div>
 											<div class="login-right">
 												<form name="signup" method="post">
-													<h3>Create your account </h3>
+													<h3>Tạo tài khoản</h3>
 					
 
 				<input type="text" value="" placeholder="Full Name" name="fname" autocomplete="off" required="">
@@ -71,7 +71,7 @@ error:function (){}
 		<input type="text" value="" placeholder="Email id" name="email" id="email" onBlur="checkAvailability()" autocomplete="off"  required="">	
 		 <span id="user-availability-status" style="font-size:12px;"></span> 
 	<input type="password" value="" placeholder="Password" name="password" required="">	
-													<input type="submit" name="submit" id="submit" value="CREATE ACCOUNT">
+													<input type="submit" name="submit" id="submit" value="Đăng ký">
 												</form>
 											</div>
 												<div class="clearfix"></div>								

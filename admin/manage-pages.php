@@ -24,7 +24,7 @@ $msg="Page data updated  successfully";
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>TMS | Admin Package Creation</title>
+<title>A-3T | Admin quản lý Other</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Pooled Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -107,33 +107,33 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 				</div>
 <!--heder end here-->
 	<ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a><i class="fa fa-angle-right"></i>Update Page Data </li>
+                <li class="breadcrumb-item"><a href="index.html">Home</a><i class="fa fa-angle-right"></i>Khác</li>
             </ol>
 		<!--grid-->
  	<div class="grid-form">
  
 <!---->
   <div class="grid-form1">
-  	       <h3>Update Page Data</h3>
+  	       <h3>Cập nhật trang</h3>
   	        	  <?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
 				else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
   	         <div class="tab-content">
 						<div class="tab-pane active" id="horizontal-form">
 							<form class="form-horizontal" name="package" method="post" enctype="multipart/form-data">
 								<div class="form-group">
-									<label for="focusedinput" class="col-sm-2 control-label">Select page</label>
+									<label for="focusedinput" class="col-sm-2 control-label">Chọn trang</label>
 									<div class="col-sm-8">
 									   <select name="menu1" onChange="MM_jumpMenu('parent',this,0)">
-                  <option value="" selected="selected" class="form-control">***Select One***</option>
-                  <option value="manage-pages.php?type=terms">terms and condition</option>
-                  <option value="manage-pages.php?type=privacy">privacy and policy</option>
-                  <option value="manage-pages.php?type=aboutus">aboutus</option> 
-                  <option value="manage-pages.php?type=contact">Contact us</option>
+                  <option value="" selected="selected" class="form-control">***Chọn trang***</option>
+                  <option value="manage-pages.php?type=terms">Điều kiện và điều khoản sử dụng</option>
+                  <option value="manage-pages.php?type=privacy">Chính sách, bảo mật</option>
+                  <option value="manage-pages.php?type=aboutus">Giới thiệu</option> 
+                  <option value="manage-pages.php?type=contact">Liên hệ</option>
                 </select>
 									</div>
 								</div>
 <div class="form-group">
-									<label for="focusedinput" class="col-sm-2 control-label">Selected Page</label>
+									<label for="focusedinput" class="col-sm-2 control-label">Trang đã chọn</label>
 									<div class="col-sm-8">
 									<?php
 			
@@ -195,11 +195,11 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 
 
 <div class="form-group">
-									<label for="focusedinput" class="col-sm-2 control-label">Package Details</label>
+									<label for="focusedinput" class="col-sm-2 control-label">Chi tiết</label>
 									<div class="col-sm-8">
 
 
-										<textarea class="form-control" rows="5" cols="50" name="pgedetails" id="pgedetails" placeholder="Package Details" required>
+										<textarea class="form-control" rows="5" cols="50" name="pgedetails" id="pgedetails" placeholder="Chi tiết" required>
 										<?php 
 $pagetype=$_GET['type'];
 $sql = "SELECT detail from tblpages where type=:pagetype";
@@ -223,7 +223,7 @@ echo htmlentities($result->detail);
 
 								<div class="row">
 			<div class="col-sm-8 col-sm-offset-2">
-				<button type="submit" name="submit" value="Update" id="submit" class="btn-primary btn">Update</button>
+				<button type="submit" name="submit" value="Update" id="submit" class="btn-primary btn">Cập nhật</button>
 
 		
 			</div>

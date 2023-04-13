@@ -1,6 +1,6 @@
 <div class="header-main">
 					<div class="logo-w3-agile">
-								<h1><a href="dashboard.php">Tourism Management System</a></h1>
+								<h1><a href="dashboard.php">Quản lý webSite đặt tour | A-3T</a></h1>
 							</div>
 				
 						
@@ -11,7 +11,7 @@
 											<div class="profile_img">	
 												<span class="prfil-img"><img src="images/User-icon.png" alt=""> </span> 
 												<div class="user-name">
-													<p>Welcome</p>
+													<p>Xin chào!</p>
 													<span>Administrator</span>
 												</div>
 												<i class="fa fa-angle-down"></i>
@@ -20,8 +20,8 @@
 											</div>	
 										</a>
 										<ul class="dropdown-menu drp-mnu">
-											<li> <a href="change-password.php"><i class="fa fa-user"></i> Profile</a> </li> 
-											<li> <a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a> </li>
+											<li> <a href="change-password.php"><i class="fa fa-user"></i>Thông tin cá nhân</a> </li> 
+											<li> <a href="logout.php"><i class="fa fa-sign-out"></i>Đăng xuất</a> </li>
 										</ul>
 									</li>
 								</ul>
